@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobber ut 9. trinn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="header-title">Jobber ute 9. trinn</h1>
+
+    <div class="grid-container">
+      <!-- Top Headers (A-D) -->
+      <div class="empty-space"></div>
+      <div class="header">A</div>
+      <div class="header">B</div>
+      <div class="header">C</div>
+      <div class="header">D</div>
+
+      <!-- 5 Rows with "Time" Labels & Buttons -->
+      <script>
+        let times = ["1. time", "2. time", "3. time", "4. time", "5. time"];
+        let cols = ["A", "B", "C", "D"];
+
+        document.write(times.map((time, rowIndex) => `
+          <div class="row-name">${time}</div>
+          ${cols.map(col => `
+            <div class="button-container" id="btn-${rowIndex + 1}${col}" onclick="resetCell('btn-${rowIndex + 1}${col}')">
+              <div class="half-button top" onclick="selectOption(event, 'btn-${rowIndex + 1}${col}', 'Kantine')">Kantine</div>
+              <div class="half-button bottom" onclick="selectOption(event, 'btn-${rowIndex + 1}${col}', 'Grupperom')">Grupperom</div>
+            </div>
+          `).join('')}
+        `).join(''));
+      </script>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
