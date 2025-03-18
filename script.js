@@ -1,17 +1,3 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyBU_LYYZdEbcAUC5jgPssYQVnbKnB67oCE",
-  authDomain: "jobber-ute.firebaseapp.com",
-  projectId: "jobber-ute",
-  storageBucket: "jobber-ute.firebasestorage.app",
-  messagingSenderId: "317030944915",
-  appId: "1:317030944915:web:7ef23ef8fa68a82a7bbd66",
-  measurementId: "G-D1GG7N8486"
-};
-
-// Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
 
 // Load saved button states from localStorage on page load
 document.addEventListener("DOMContentLoaded", function () {
