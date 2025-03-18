@@ -1,4 +1,3 @@
-
 // Load saved button states from localStorage on page load
 document.addEventListener("DOMContentLoaded", function () {
   let savedStates = JSON.parse(localStorage.getItem("buttonStates")) || {};
